@@ -1,23 +1,49 @@
 import React, {useState} from 'react';
-import {Text, TextInput, View} from 'react-native';
+import {Image, ScrollView, Text} from 'react-native';
+
+const logo = {
+  uri: 'https://reactnative.dev/img/tiny_logo.png',
+  width: 64,
+  height: 64,
+};
 
 export default function PizzaTranslator() {
-  const [text, setText] = useState('');
-
   return (
-    <View style={{padding: 10}}>
-      <TextInput
-        style={{height: 40, borderBottomWidth: 1}}
-        placeholder="Type here something..."
-        onChangeText={text => setText(text)}
-        defaultValue={text}
-      />
-      <Text style={{padding: 10, fontSize: 42}}>
-        {text
-          .split(' ')
-          .map(word => word && '🍕')
-          .join(' ')}
-      </Text>
-    </View>
+    <ScrollView
+      contentContainerStyle={{
+        alignItems: 'flex-end',
+      }}>
+      <Text style={{fontSize: 96}}>Scroll me plz</Text>
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Text style={{fontSize: 96}}>If you like</Text>
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Text style={{fontSize: 96}}>Scrolling down</Text>
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Text style={{fontSize: 96}}>What's the best</Text>
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Text style={{fontSize: 96}}>Framework around?</Text>
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Image source={logo} />
+      <Text style={{fontSize: 80}}>React Native</Text>
+    </ScrollView>
   );
 }
